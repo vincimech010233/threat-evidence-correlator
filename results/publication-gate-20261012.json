@@ -1,0 +1,88 @@
+{
+  "classification": "VERIFIED",
+  "timestamp": "2026-10-12T11:48:10.774027+00:00",
+  "initial_clean": true,
+  "checks": [
+    {
+      "command": "python3 -m unittest discover -s tests -v",
+      "exit": 0,
+      "output": "test_allegations (test_correlator.CorrelationTests.test_allegations) ... ok\ntest_date_without_time_rejects (test_correlator.CorrelationTests.test_date_without_time_rejects) ... ok\ntest_determinism_and_escape (test_correlator.CorrelationTests.test_determinism_and_escape) ... ok\ntest_fixture (test_correlator.CorrelationTests.test_fixture) ... ok\ntest_intermediate_ancestry (test_correlator.CorrelationTests.test_intermediate_ancestry) ... ok\ntest_invalid_and_verification (test_correlator.CorrelationTests.test_invalid_and_verification) ... ok\ntest_lineage_cycle_missing (test_correlator.CorrelationTests.test_lineage_cycle_missing) ... ok\ntest_nonoverlap (test_correlator.CorrelationTests.test_nonoverlap) ... ok\ntest_transaction_idempotence_and_conflict (test_correlator.CorrelationTests.test_transaction_idempotence_and_conflict) ... ok\ntest_unknown_not_independent (test_correlator.CorrelationTests.test_unknown_not_independent) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.006s\n\nOK\n"
+    },
+    {
+      "command": "[workspace]/projects/portfolio-delivery-20261012/.venv/bin/ruff check src tests tools --select E4,E7,E9,F",
+      "exit": 0,
+      "output": "All checks passed!\n"
+    },
+    {
+      "command": "[workspace]/projects/portfolio-delivery-20261012/.venv/bin/ruff format --check src tests tools",
+      "exit": 0,
+      "output": "3 files already formatted\n"
+    }
+  ],
+  "history_scan": {
+    "unique_blobs": 34,
+    "flags": [],
+    "classification": "OBSERVED",
+    "scope": "Conservative credential/private-host-path patterns; not exhaustive secret detection; all reachable git blobs"
+  },
+  "license": {
+    "mit_present": true,
+    "third_party_metadata": [
+      "LICENSE",
+      "results/licenses.json"
+    ],
+    "limitations": "Registry metadata reviewed; exhaustive legal/supply-chain review NOT_VERIFIED. Project license does not relicense third-party dependencies."
+  },
+  "dependency_audit": {
+    "classification": "OBSERVED",
+    "timestamp": "2026-10-12T11:48:10.774027+00:00",
+    "queries": [
+      {
+        "package": {
+          "name": "ruff",
+          "ecosystem": "PyPI"
+        },
+        "version": "0.17.0"
+      }
+    ],
+    "response": {
+      "results": [
+        {}
+      ]
+    },
+    "advisories": 0,
+    "scope": "OSV version lookup; no vulnerability-free or full supply-chain/legal assurance"
+  },
+  "tests_pass": true,
+  "working_tree_clean": true,
+  "reviewed_commit": "88c631a61fc89a7acbc84965ca944e44b013c53f",
+  "phase": "Prepublication verification of implementation; documentation/evidence additions follow in the publication commit",
+  "example_reproduction": {
+    "classification": "VERIFIED",
+    "checks": [
+      {
+        "command": [
+          "python3",
+          "src/correlator.py",
+          "--synthetic",
+          "examples/intelligence.json",
+          "[workspace]/projects/portfolio-publication-20261012/examples/threat-evidence-correlator/lab.sqlite",
+          "[workspace]/projects/portfolio-publication-20261012/examples/threat-evidence-correlator/report.json",
+          "[workspace]/projects/portfolio-publication-20261012/examples/threat-evidence-correlator/report.md"
+        ],
+        "exit": 0,
+        "output": ""
+      }
+    ],
+    "semantic_equal": true,
+    "comparison_scope": "Exact JSON semantic equality with committed result",
+    "output": "examples/threat-evidence-correlator/report.json"
+  },
+  "authorship_privacy": {
+    "classification": "VERIFIED",
+    "original_git_author_identities_already_in_public_profile_history": true,
+    "address_values_retained_in_this_record": false
+  },
+  "hosted_ci": "NOT_VERIFIED at this prepublication gate; use exact commit GitHub Actions run after push",
+  "known_limitations_retained": true
+}

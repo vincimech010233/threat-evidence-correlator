@@ -1,0 +1,23 @@
+[
+  {
+    "command": "python3 -m unittest discover -s tests -v",
+    "exit_status": 0,
+    "elapsed_seconds": 0.095,
+    "classification": "OBSERVED",
+    "output": "test_allegations (test_correlator.CorrelationTests.test_allegations) ... ok\ntest_date_without_time_rejects (test_correlator.CorrelationTests.test_date_without_time_rejects) ... ok\ntest_determinism_and_escape (test_correlator.CorrelationTests.test_determinism_and_escape) ... ok\ntest_fixture (test_correlator.CorrelationTests.test_fixture) ... ok\ntest_intermediate_ancestry (test_correlator.CorrelationTests.test_intermediate_ancestry) ... ok\ntest_invalid_and_verification (test_correlator.CorrelationTests.test_invalid_and_verification) ... ok\ntest_lineage_cycle_missing (test_correlator.CorrelationTests.test_lineage_cycle_missing) ... ok\ntest_nonoverlap (test_correlator.CorrelationTests.test_nonoverlap) ... ok\ntest_transaction_idempotence_and_conflict (test_correlator.CorrelationTests.test_transaction_idempotence_and_conflict) ... ok\ntest_unknown_not_independent (test_correlator.CorrelationTests.test_unknown_not_independent) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.005s\n\nOK\nREVIEW_OBSERVED_PEAK_RSS_KIB=20960\n"
+  },
+  {
+    "command": "../portfolio-delivery-20261012/.venv/bin/ruff check src tests tools --select E4,E7,E9,F",
+    "exit_status": 0,
+    "elapsed_seconds": 0.014,
+    "classification": "OBSERVED",
+    "output": "All checks passed!\nREVIEW_OBSERVED_PEAK_RSS_KIB=16300\n"
+  },
+  {
+    "command": "../portfolio-delivery-20261012/.venv/bin/ruff format --check src tests tools",
+    "exit_status": 0,
+    "elapsed_seconds": 0.011,
+    "classification": "OBSERVED",
+    "output": "3 files already formatted\nREVIEW_OBSERVED_PEAK_RSS_KIB=15832\n"
+  }
+]

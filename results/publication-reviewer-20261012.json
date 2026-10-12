@@ -1,0 +1,48 @@
+{
+  "role": "Separate critical review agent using the same model as developer; not an independent model or external audit",
+  "timestamp": "2026-10-12T11:54:30.430512+00:00",
+  "project_review": {
+    "project": "threat-evidence-correlator",
+    "decision": "APPROVE",
+    "classification": "VERIFIED",
+    "scope": "Public portfolio publication within the retained restricted/synthetic claims",
+    "reviewed_implementation_commit": "88c631a61fc89a7acbc84965ca944e44b013c53f",
+    "test_summary": "Python 10",
+    "independent_checks_file": "reviewer-tests-threat-evidence-correlator.json",
+    "max_observed_check_peak_rss_kib": 20960,
+    "history_inspection": {
+      "project": "threat-evidence-correlator",
+      "classification": "OBSERVED",
+      "historical_commits": 1,
+      "unique_historical_blobs": 34,
+      "binary_blob_count": 0,
+      "sensitive_pattern_findings": [],
+      "unexpected_history_artifacts": [],
+      "author_email_categories": {
+        "github_noreply": 0,
+        "other_configured_address": 1
+      },
+      "readme_publication_text_stale": true
+    },
+    "resolved_findings": [
+      "Current README no longer claims manual-only/no-push status; hosted CI wording is commit-specific",
+      "Draft publication review preserves historical evidence and separate same-model reviewer disclosure"
+    ],
+    "blocking_findings": [],
+    "limitations": [
+      "Synthetic qualified-name/provenance graph; no externally established truth or independence",
+      "No targeting, real OSINT or full STIX conformance"
+    ],
+    "source_and_test_sha256": {
+      "src/correlator.py": "4bd79c911bfebd6c43e250d1a789caee3945348c8c61dd8041a1cd9e61f9639d",
+      "tests/test_correlator.py": "ef96830df2e577d37f35f59b4ac508ff5d4061faa923fae7ebef30c8a177b98d",
+      "tools/dependency_audit.py": "45bf49acc44285b4578b098b9dee91877cec5d25d91810b5736b3556991a352a"
+    },
+    "draft_readme_sha256": "13f3a4a238e81ac7254b9b7e784c9a1a09ac3be55b2093a885479f904fdd2412",
+    "draft_publication_review_sha256": "367b18ec01fc8e17c003a1d47b6fed9cba7c4973aa604cd1fef1b1db14020247",
+    "hosted_ci": "NOT_VERIFIED: remote workflow must be checked on published commit"
+  },
+  "scope": "Eight explicitly authorized independent public portfolio repositories; offline synthetic tests only; reviewer made no project source edits or remote changes",
+  "advisory_review": null,
+  "hosted_ci": "NOT_VERIFIED at prepublication review"
+}
