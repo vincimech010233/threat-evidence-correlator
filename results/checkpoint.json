@@ -1,0 +1,10 @@
+{
+  "project": "threat-evidence-correlator",
+  "status": "VALIDATED_LOCAL",
+  "classification": "VERIFIED",
+  "limitation": "Synthetic STIX-like profile; declared source independence and truth are not externally verified.",
+  "review": "docs/REVIEW.md",
+  "tests": "results/validation.json",
+  "publication_ready_for_manual_review": true,
+  "remote_ci": "NOT_VERIFIED"
+}

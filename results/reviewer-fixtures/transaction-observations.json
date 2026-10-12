@@ -1,0 +1,7 @@
+{
+  "classification": "OBSERVED",
+  "mixed_new_and_conflicting_import_rejected": true,
+  "error": "immutable evidence conflict",
+  "remaining_record_count": 6,
+  "stored_payload_digest_matches": true
+}

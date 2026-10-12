@@ -1,0 +1,14 @@
+{
+  "classification": "OBSERVED",
+  "scope": "Nonignored files, conservative credential patterns and host path check; not exhaustive secret detection",
+  "candidate_files": 36,
+  "flags": [],
+  "non_image_binaries": [],
+  "git_status": "?? .github/\n?? .gitignore\n?? CHANGELOG.md\n?? CONTRIBUTING.md\n?? LICENSE\n?? README.md\n?? SECURITY.md\n?? docs/\n?? examples/\n?? requirements-dev.txt\n?? requirements.lock\n?? results/\n?? src/\n?? tests/\n?? tools/\n",
+  "publication": "Initial local commit using configured owner identity after this scan. No remote, push, pull request, email or external publication.",
+  "timestamp": "2026-10-12T11:17:31.785402+00:00",
+  "identity_review": "Configured Git name/email retained in normal commit metadata only; not copied into reports. Resource records contain load/memory/disk values and tool versions, no hostname, user identity, IP or device identifiers.",
+  "static_ci": "VERIFIED YAML trigger/job structure only; hosted execution NOT_VERIFIED",
+  "dependency_query_status": "OBSERVED",
+  "listed_advisories": 0
+}

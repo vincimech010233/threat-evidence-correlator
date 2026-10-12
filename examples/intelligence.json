@@ -1,0 +1,122 @@
+{
+  "synthetic": true,
+  "profile": "stix-like-fixture-v1",
+  "records": [
+    {
+      "id": "e1",
+      "entity": {
+        "kind": "software-family",
+        "namespace": "lab",
+        "name": "Copper Moth"
+      },
+      "predicate": "synthetic-feature",
+      "value": "present",
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_to": "2026-01-02T00:00:00Z",
+      "recorded_at": "2026-01-03T00:00:00Z",
+      "source": "fixture-source-e1",
+      "source_group": "group-a",
+      "artifact": "fixture-artifact-e1",
+      "derived_from": [],
+      "claim_kind": "observation",
+      "verification_ref": null
+    },
+    {
+      "id": "e2",
+      "entity": {
+        "kind": "software-family",
+        "namespace": "lab",
+        "name": "Copper Moth"
+      },
+      "predicate": "synthetic-feature",
+      "value": "present",
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_to": "2026-01-02T00:00:00Z",
+      "recorded_at": "2026-01-03T00:00:00Z",
+      "source": "fixture-source-e2",
+      "source_group": "group-b",
+      "artifact": "fixture-artifact-e2",
+      "derived_from": [
+        "e1"
+      ],
+      "claim_kind": "observation",
+      "verification_ref": null
+    },
+    {
+      "id": "e3",
+      "entity": {
+        "kind": "software-family",
+        "namespace": "lab",
+        "name": "Copper Moth"
+      },
+      "predicate": "synthetic-feature",
+      "value": "absent",
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_to": "2026-01-02T00:00:00Z",
+      "recorded_at": "2026-01-03T00:00:00Z",
+      "source": "fixture-source-e3",
+      "source_group": "group-c",
+      "artifact": "fixture-artifact-e3",
+      "derived_from": [],
+      "claim_kind": "observation",
+      "verification_ref": null
+    },
+    {
+      "id": "e4",
+      "entity": {
+        "kind": "software-family",
+        "namespace": "other-lab",
+        "name": "Copper Moth"
+      },
+      "predicate": "synthetic-feature",
+      "value": "present",
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_to": "2026-01-02T00:00:00Z",
+      "recorded_at": "2026-01-03T00:00:00Z",
+      "source": "fixture-source-e4",
+      "source_group": "group-d",
+      "artifact": "fixture-artifact-e4",
+      "derived_from": [],
+      "claim_kind": "observation",
+      "verification_ref": null
+    },
+    {
+      "id": "e5",
+      "entity": {
+        "kind": "software-family",
+        "namespace": "lab",
+        "name": "Silver Kite"
+      },
+      "predicate": "synthetic-feature",
+      "value": "present",
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_to": "2026-01-02T00:00:00Z",
+      "recorded_at": "2026-01-03T00:00:00Z",
+      "source": "fixture-source-e5",
+      "source_group": "group-e",
+      "artifact": "fixture-artifact-e5",
+      "derived_from": [],
+      "claim_kind": "observation",
+      "verification_ref": null
+    },
+    {
+      "id": "e6",
+      "entity": {
+        "kind": "software-family",
+        "namespace": "lab",
+        "name": "silver  KITE"
+      },
+      "predicate": "synthetic-feature",
+      "value": "present",
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_to": "2026-01-02T00:00:00Z",
+      "recorded_at": "2026-01-03T00:00:00Z",
+      "source": "fixture-source-e6",
+      "source_group": "group-f",
+      "artifact": "fixture-artifact-e6",
+      "derived_from": [],
+      "claim_kind": "observation",
+      "verification_ref": null
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "classification": "OBSERVED",
+  "memory_available_kib": 10468760,
+  "disk_free_bytes": 386754367488,
+  "load_average": [
+    0.63525390625,
+    0.5595703125,
+    0.86767578125
+  ],
+  "cargo_jobs": 2,
+  "numeric_threads": 2,
+  "check_timeout_seconds": 180,
+  "ordinary_maximum_memory_gib": 6,
+  "workload": "bounded synthetic fixtures, no GPU"
+}

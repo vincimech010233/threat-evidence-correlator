@@ -1,0 +1,156 @@
+[
+  {
+    "timestamp": "2026-10-12T10:42:32.657339+00:00",
+    "checks": [
+      {
+        "command": "python3 -m unittest discover -s tests -v",
+        "exit_status": 0,
+        "seconds": 0.1,
+        "classification": "OBSERVED",
+        "output": "test_allegations (test_correlator.CorrelationTests.test_allegations) ... ok\ntest_determinism_and_escape (test_correlator.CorrelationTests.test_determinism_and_escape) ... ok\ntest_fixture (test_correlator.CorrelationTests.test_fixture) ... ok\ntest_invalid_and_verification (test_correlator.CorrelationTests.test_invalid_and_verification) ... ok\ntest_lineage_cycle_missing (test_correlator.CorrelationTests.test_lineage_cycle_missing) ... ok\ntest_nonoverlap (test_correlator.CorrelationTests.test_nonoverlap) ... ok\ntest_transaction_idempotence_and_conflict (test_correlator.CorrelationTests.test_transaction_idempotence_and_conflict) ... ok\ntest_unknown_not_independent (test_correlator.CorrelationTests.test_unknown_not_independent) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.005s\n\nOK\nOBSERVED peak_RSS_KiB=21588 elapsed_seconds=0.09\n"
+      },
+      {
+        "command": "python3 src/correlator.py --synthetic examples/intelligence.json results/lab.sqlite results/report.json results/report.md",
+        "exit_status": 0,
+        "seconds": 0.074,
+        "classification": "OBSERVED",
+        "output": "OBSERVED peak_RSS_KiB=19232 elapsed_seconds=0.07\n"
+      },
+      {
+        "command": "python3 -m compileall -q src tests",
+        "exit_status": 0,
+        "seconds": 0.058,
+        "classification": "OBSERVED",
+        "output": "OBSERVED peak_RSS_KiB=13448 elapsed_seconds=0.05\n"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-12T10:43:57.242383+00:00",
+    "checks": [
+      {
+        "command": "python3 -m unittest discover -s tests -v",
+        "exit_status": 0,
+        "seconds": 0.093,
+        "classification": "OBSERVED",
+        "output": "test_allegations (test_correlator.CorrelationTests.test_allegations) ... ok\ntest_date_without_time_rejects (test_correlator.CorrelationTests.test_date_without_time_rejects) ... ok\ntest_determinism_and_escape (test_correlator.CorrelationTests.test_determinism_and_escape) ... ok\ntest_fixture (test_correlator.CorrelationTests.test_fixture) ... ok\ntest_intermediate_ancestry (test_correlator.CorrelationTests.test_intermediate_ancestry) ... ok\ntest_invalid_and_verification (test_correlator.CorrelationTests.test_invalid_and_verification) ... ok\ntest_lineage_cycle_missing (test_correlator.CorrelationTests.test_lineage_cycle_missing) ... ok\ntest_nonoverlap (test_correlator.CorrelationTests.test_nonoverlap) ... ok\ntest_transaction_idempotence_and_conflict (test_correlator.CorrelationTests.test_transaction_idempotence_and_conflict) ... ok\ntest_unknown_not_independent (test_correlator.CorrelationTests.test_unknown_not_independent) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.006s\n\nOK\nOBSERVED peak_RSS_KiB=21504 elapsed_seconds=0.09\n"
+      },
+      {
+        "command": "python3 src/correlator.py --synthetic examples/intelligence.json results/lab.sqlite results/report.json results/report.md",
+        "exit_status": 0,
+        "seconds": 0.069,
+        "classification": "OBSERVED",
+        "output": "OBSERVED peak_RSS_KiB=19392 elapsed_seconds=0.06\n"
+      },
+      {
+        "command": "python3 -m compileall -q src tests",
+        "exit_status": 0,
+        "seconds": 0.075,
+        "classification": "OBSERVED",
+        "output": "OBSERVED peak_RSS_KiB=13272 elapsed_seconds=0.07\n"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-12T11:13:36.027711+00:00",
+    "checks": [
+      {
+        "command": "../portfolio-delivery-20261012/.venv/bin/ruff check src tests tools --select E4,F --fix --output-format concise",
+        "exit_status": 1,
+        "seconds": 0.019,
+        "classification": "OBSERVED",
+        "output": "tests/test_correlator.py:37:155: F821 Undefined name `markdown`\nFound 4 errors (3 fixed, 1 remaining).\nCommand exited with non-zero status 1\nOBSERVED peak_RSS_KiB=20016 elapsed_seconds=0.01\n"
+      },
+      {
+        "command": "../portfolio-delivery-20261012/.venv/bin/ruff format src tests tools",
+        "exit_status": 0,
+        "seconds": 0.014,
+        "classification": "OBSERVED",
+        "output": "3 files reformatted\nOBSERVED peak_RSS_KiB=18440 elapsed_seconds=0.01\n"
+      },
+      {
+        "command": "../portfolio-delivery-20261012/.venv/bin/ruff check src tests tools --select E4,E7,E9,F",
+        "exit_status": 1,
+        "seconds": 0.014,
+        "classification": "OBSERVED",
+        "output": "E731 Do not assign a `lambda` expression, use a `def`\n   --> src/correlator.py:280:5\n    |\n279 |   def markdown(report):\n280 | /     esc = lambda x: (\n281 | |         html.escape(str(x))\n282 | |         .replace(\"`\", \"&#96;\")\n283 | |         .replace(\"[\", \"&#91;\")\n284 | |         .replace(\"]\", \"&#93;\")\n285 | |     )\n    | |_____^\n286 |       lines = [\n287 |           \"# Threat Evidence Correlator\",\n    |\nhelp: Rewrite `esc` as a `def`\n    |\n279 | def markdown(report):\n    -     esc = lambda x: (\n    -         html.escape(str(x))\n    -         .replace(\"`\", \"&#96;\")\n    -         .replace(\"[\", \"&#91;\")\n    -         .replace(\"]\", \"&#93;\")\n    -     )\n280 +     def esc(x):\n281 +         return (\n282 +             html.escape(str(x))\n283 +             .replace(\"`\", \"&#96;\")\n284 +             .replace(\"[\", \"&#91;\")\n285 +             .replace(\"]\", \"&#93;\")\n286 +         )\n287 |     lines = [\n    |\nnote: This is an unsafe fix and may change runtime behavior\n\nF821 Undefined name `markdown`\n  --> tests/test_correlator.py:98:38\n   |\n96 |         self.assertEqual(correlate(rows), correlate(list(reversed(rows))))\n97 |         rows[0][\"predicate\"] = \"<script>\"\n98 |         self.assertNotIn(\"<script>\", markdown(correlate(rows)))\n   |                                      ^^^^^^^^\n\nFound 2 errors.\n1 unsafe fix available with `--fix --unsafe-fixes`.\nCommand exited with non-zero status 1\nOBSERVED peak_RSS_KiB=19820 elapsed_seconds=0.01\n"
+      },
+      {
+        "command": "../portfolio-delivery-20261012/.venv/bin/ruff format --check src tests tools",
+        "exit_status": 0,
+        "seconds": 0.012,
+        "classification": "OBSERVED",
+        "output": "3 files already formatted\nOBSERVED peak_RSS_KiB=16256 elapsed_seconds=0.01\n"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-12T11:13:36.144606+00:00",
+    "checks": [
+      {
+        "command": "python3 -m unittest discover -s tests -v",
+        "exit_status": 1,
+        "seconds": 0.116,
+        "classification": "OBSERVED",
+        "output": "test_allegations (test_correlator.CorrelationTests.test_allegations) ... ok\ntest_date_without_time_rejects (test_correlator.CorrelationTests.test_date_without_time_rejects) ... ok\ntest_determinism_and_escape (test_correlator.CorrelationTests.test_determinism_and_escape) ... ERROR\ntest_fixture (test_correlator.CorrelationTests.test_fixture) ... ok\ntest_intermediate_ancestry (test_correlator.CorrelationTests.test_intermediate_ancestry) ... ok\ntest_invalid_and_verification (test_correlator.CorrelationTests.test_invalid_and_verification) ... ok\ntest_lineage_cycle_missing (test_correlator.CorrelationTests.test_lineage_cycle_missing) ... ok\ntest_nonoverlap (test_correlator.CorrelationTests.test_nonoverlap) ... ok\ntest_transaction_idempotence_and_conflict (test_correlator.CorrelationTests.test_transaction_idempotence_and_conflict) ... ok\ntest_unknown_not_independent (test_correlator.CorrelationTests.test_unknown_not_independent) ... ok\n\n======================================================================\nERROR: test_determinism_and_escape (test_correlator.CorrelationTests.test_determinism_and_escape)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"[workspace]/projects/threat-evidence-correlator/tests/test_correlator.py\", line 98, in test_determinism_and_escape\n    self.assertNotIn(\"<script>\", markdown(correlate(rows)))\n                                 ^^^^^^^^\nNameError: name 'markdown' is not defined\n\n----------------------------------------------------------------------\nRan 10 tests in 0.007s\n\nFAILED (errors=1)\nCommand exited with non-zero status 1\nOBSERVED peak_RSS_KiB=21720 elapsed_seconds=0.11\n"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-12T11:14:46.679135+00:00",
+    "checks": [
+      {
+        "command": "../portfolio-delivery-20261012/.venv/bin/ruff check src tests tools --select E4,F --fix --output-format concise",
+        "exit_status": 0,
+        "seconds": 0.037,
+        "classification": "OBSERVED",
+        "output": "Found 1 error (1 fixed, 0 remaining).\nOBSERVED peak_RSS_KiB=19412 elapsed_seconds=0.03\n"
+      },
+      {
+        "command": "../portfolio-delivery-20261012/.venv/bin/ruff format src tests tools",
+        "exit_status": 0,
+        "seconds": 0.036,
+        "classification": "OBSERVED",
+        "output": "2 files reformatted, 1 file left unchanged\nOBSERVED peak_RSS_KiB=17704 elapsed_seconds=0.03\n"
+      },
+      {
+        "command": "../portfolio-delivery-20261012/.venv/bin/ruff check src tests tools --select E4,E7,E9,F",
+        "exit_status": 0,
+        "seconds": 0.03,
+        "classification": "OBSERVED",
+        "output": "All checks passed!\nOBSERVED peak_RSS_KiB=18888 elapsed_seconds=0.02\n"
+      },
+      {
+        "command": "../portfolio-delivery-20261012/.venv/bin/ruff format --check src tests tools",
+        "exit_status": 0,
+        "seconds": 0.029,
+        "classification": "OBSERVED",
+        "output": "3 files already formatted\nOBSERVED peak_RSS_KiB=15788 elapsed_seconds=0.02\n"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-12T11:14:46.840638+00:00",
+    "checks": [
+      {
+        "command": "python3 -m unittest discover -s tests -v",
+        "exit_status": 0,
+        "seconds": 0.159,
+        "classification": "OBSERVED",
+        "output": "test_allegations (test_correlator.CorrelationTests.test_allegations) ... ok\ntest_date_without_time_rejects (test_correlator.CorrelationTests.test_date_without_time_rejects) ... ok\ntest_determinism_and_escape (test_correlator.CorrelationTests.test_determinism_and_escape) ... ok\ntest_fixture (test_correlator.CorrelationTests.test_fixture) ... ok\ntest_intermediate_ancestry (test_correlator.CorrelationTests.test_intermediate_ancestry) ... ok\ntest_invalid_and_verification (test_correlator.CorrelationTests.test_invalid_and_verification) ... ok\ntest_lineage_cycle_missing (test_correlator.CorrelationTests.test_lineage_cycle_missing) ... ok\ntest_nonoverlap (test_correlator.CorrelationTests.test_nonoverlap) ... ok\ntest_transaction_idempotence_and_conflict (test_correlator.CorrelationTests.test_transaction_idempotence_and_conflict) ... ok\ntest_unknown_not_independent (test_correlator.CorrelationTests.test_unknown_not_independent) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.007s\n\nOK\nOBSERVED peak_RSS_KiB=21700 elapsed_seconds=0.15\n"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-12T11:14:47.548878+00:00",
+    "checks": [
+      {
+        "command": "python3 tools/dependency_audit.py .",
+        "exit_status": 0,
+        "seconds": 0.704,
+        "classification": "OBSERVED",
+        "output": "OBSERVED 1 queries 0 advisories\nOBSERVED peak_RSS_KiB=22856 elapsed_seconds=0.70\n"
+      }
+    ]
+  }
+]

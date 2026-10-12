@@ -1,0 +1,241 @@
+{
+  "classification": "INFERRED",
+  "groups": [
+    {
+      "assertions": [
+        {
+          "artifact": "fixture-artifact-e1",
+          "claim_kind": "observation",
+          "derived_from": [],
+          "entity": {
+            "kind": "software-family",
+            "name": "Copper Moth",
+            "namespace": "lab"
+          },
+          "id": "e1",
+          "predicate": "synthetic-feature",
+          "recorded_at": "2026-01-03T00:00:00Z",
+          "source": "fixture-source-e1",
+          "source_group": "group-a",
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": "2026-01-02T00:00:00Z",
+          "value": "present",
+          "verification_ref": null
+        },
+        {
+          "artifact": "fixture-artifact-e2",
+          "claim_kind": "observation",
+          "derived_from": [
+            "e1"
+          ],
+          "entity": {
+            "kind": "software-family",
+            "name": "Copper Moth",
+            "namespace": "lab"
+          },
+          "id": "e2",
+          "predicate": "synthetic-feature",
+          "recorded_at": "2026-01-03T00:00:00Z",
+          "source": "fixture-source-e2",
+          "source_group": "group-b",
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": "2026-01-02T00:00:00Z",
+          "value": "present",
+          "verification_ref": null
+        },
+        {
+          "artifact": "fixture-artifact-e3",
+          "claim_kind": "observation",
+          "derived_from": [],
+          "entity": {
+            "kind": "software-family",
+            "name": "Copper Moth",
+            "namespace": "lab"
+          },
+          "id": "e3",
+          "predicate": "synthetic-feature",
+          "recorded_at": "2026-01-03T00:00:00Z",
+          "source": "fixture-source-e3",
+          "source_group": "group-c",
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": "2026-01-02T00:00:00Z",
+          "value": "absent",
+          "verification_ref": null
+        }
+      ],
+      "assessment": "DISPUTED",
+      "classification": "INFERRED",
+      "contradictions": [
+        [
+          "e1",
+          "e3"
+        ],
+        [
+          "e2",
+          "e3"
+        ]
+      ],
+      "entity": [
+        "software-family",
+        "lab",
+        "copper moth"
+      ],
+      "independent_lineage_groups": [
+        [
+          "e1",
+          "e2"
+        ],
+        [
+          "e3"
+        ]
+      ],
+      "predicate": "synthetic-feature",
+      "reason": "Conflicting values overlap in validity time."
+    },
+    {
+      "assertions": [
+        {
+          "artifact": "fixture-artifact-e5",
+          "claim_kind": "observation",
+          "derived_from": [],
+          "entity": {
+            "kind": "software-family",
+            "name": "Silver Kite",
+            "namespace": "lab"
+          },
+          "id": "e5",
+          "predicate": "synthetic-feature",
+          "recorded_at": "2026-01-03T00:00:00Z",
+          "source": "fixture-source-e5",
+          "source_group": "group-e",
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": "2026-01-02T00:00:00Z",
+          "value": "present",
+          "verification_ref": null
+        },
+        {
+          "artifact": "fixture-artifact-e6",
+          "claim_kind": "observation",
+          "derived_from": [],
+          "entity": {
+            "kind": "software-family",
+            "name": "silver  KITE",
+            "namespace": "lab"
+          },
+          "id": "e6",
+          "predicate": "synthetic-feature",
+          "recorded_at": "2026-01-03T00:00:00Z",
+          "source": "fixture-source-e6",
+          "source_group": "group-f",
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": "2026-01-02T00:00:00Z",
+          "value": "present",
+          "verification_ref": null
+        }
+      ],
+      "assessment": "MULTIPLE_DECLARED_LINEAGES",
+      "classification": "INFERRED",
+      "contradictions": [],
+      "entity": [
+        "software-family",
+        "lab",
+        "silver kite"
+      ],
+      "independent_lineage_groups": [
+        [
+          "e5"
+        ],
+        [
+          "e6"
+        ]
+      ],
+      "predicate": "synthetic-feature",
+      "reason": "Distinct declared roots support review; independence and truth are not externally verified."
+    },
+    {
+      "assertions": [
+        {
+          "artifact": "fixture-artifact-e4",
+          "claim_kind": "observation",
+          "derived_from": [],
+          "entity": {
+            "kind": "software-family",
+            "name": "Copper Moth",
+            "namespace": "other-lab"
+          },
+          "id": "e4",
+          "predicate": "synthetic-feature",
+          "recorded_at": "2026-01-03T00:00:00Z",
+          "source": "fixture-source-e4",
+          "source_group": "group-d",
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": "2026-01-02T00:00:00Z",
+          "value": "present",
+          "verification_ref": null
+        }
+      ],
+      "assessment": "SINGLE_LINEAGE",
+      "classification": "INFERRED",
+      "contradictions": [],
+      "entity": [
+        "software-family",
+        "other-lab",
+        "copper moth"
+      ],
+      "independent_lineage_groups": [
+        [
+          "e4"
+        ]
+      ],
+      "predicate": "synthetic-feature",
+      "reason": "Shared or unknown provenance prevents independent corroboration."
+    }
+  ],
+  "policy": "Names normalized with NFC/casefold/whitespace; namespace-qualified exact matches only. Conflicts require half-open time overlap. Source independence is supplied, not proven. No automatic verification or targeting.",
+  "profile": "stix-like-fixture-v1",
+  "review_queue": [
+    {
+      "action": "Conflicting values overlap in validity time.",
+      "assessment": "DISPUTED",
+      "entity": [
+        "software-family",
+        "lab",
+        "copper moth"
+      ],
+      "predicate": "synthetic-feature"
+    },
+    {
+      "action": "Distinct declared roots support review; independence and truth are not externally verified.",
+      "assessment": "MULTIPLE_DECLARED_LINEAGES",
+      "entity": [
+        "software-family",
+        "lab",
+        "silver kite"
+      ],
+      "predicate": "synthetic-feature"
+    },
+    {
+      "action": "Shared or unknown provenance prevents independent corroboration.",
+      "assessment": "SINGLE_LINEAGE",
+      "entity": [
+        "software-family",
+        "other-lab",
+        "copper moth"
+      ],
+      "predicate": "synthetic-feature"
+    },
+    {
+      "action": "Same normalized name in distinct namespaces; do not merge.",
+      "assessment": "QUALIFIED_MATCH_REVIEW",
+      "entity": [
+        "software-family",
+        "copper moth"
+      ],
+      "namespaces": [
+        "lab",
+        "other-lab"
+      ]
+    }
+  ],
+  "synthetic": true
+}

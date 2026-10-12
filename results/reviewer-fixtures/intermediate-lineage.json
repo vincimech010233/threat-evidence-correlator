@@ -1,0 +1,86 @@
+{
+  "synthetic": true,
+  "profile": "stix-like-fixture-v1",
+  "records": [
+    {
+      "id": "root",
+      "entity": {
+        "kind": "software-family",
+        "namespace": "lab",
+        "name": "Copper Moth"
+      },
+      "predicate": "context",
+      "value": "present",
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_to": "2026-01-02T00:00:00Z",
+      "recorded_at": "2026-01-03T00:00:00Z",
+      "source": "fixture-source-e1",
+      "source_group": "root-group",
+      "artifact": "root-artifact",
+      "derived_from": [],
+      "claim_kind": "observation",
+      "verification_ref": null
+    },
+    {
+      "id": "intermediate",
+      "entity": {
+        "kind": "software-family",
+        "namespace": "lab",
+        "name": "Copper Moth"
+      },
+      "predicate": "context",
+      "value": "present",
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_to": "2026-01-02T00:00:00Z",
+      "recorded_at": "2026-01-03T00:00:00Z",
+      "source": "fixture-source-e1",
+      "source_group": "shared-group",
+      "artifact": "middle-artifact",
+      "derived_from": [
+        "root"
+      ],
+      "claim_kind": "observation",
+      "verification_ref": null
+    },
+    {
+      "id": "child",
+      "entity": {
+        "kind": "software-family",
+        "namespace": "lab",
+        "name": "Copper Moth"
+      },
+      "predicate": "claim",
+      "value": "present",
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_to": "2026-01-02T00:00:00Z",
+      "recorded_at": "2026-01-03T00:00:00Z",
+      "source": "fixture-source-e1",
+      "source_group": "child-group",
+      "artifact": "child-artifact",
+      "derived_from": [
+        "intermediate"
+      ],
+      "claim_kind": "observation",
+      "verification_ref": null
+    },
+    {
+      "id": "other",
+      "entity": {
+        "kind": "software-family",
+        "namespace": "lab",
+        "name": "Copper Moth"
+      },
+      "predicate": "claim",
+      "value": "present",
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_to": "2026-01-02T00:00:00Z",
+      "recorded_at": "2026-01-03T00:00:00Z",
+      "source": "fixture-source-e1",
+      "source_group": "shared-group",
+      "artifact": "other-artifact",
+      "derived_from": [],
+      "claim_kind": "observation",
+      "verification_ref": null
+    }
+  ]
+}

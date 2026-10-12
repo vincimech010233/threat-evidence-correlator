@@ -1,0 +1,150 @@
+{
+  "profile": "stix-like-fixture-v1",
+  "synthetic": true,
+  "classification": "INFERRED",
+  "groups": [
+    {
+      "entity": [
+        "software-family",
+        "lab",
+        "copper moth"
+      ],
+      "predicate": "claim",
+      "classification": "INFERRED",
+      "assessment": "SINGLE_LINEAGE",
+      "reason": "Shared or unknown provenance prevents independent corroboration.",
+      "independent_lineage_groups": [
+        [
+          "child",
+          "other"
+        ]
+      ],
+      "contradictions": [],
+      "assertions": [
+        {
+          "id": "child",
+          "entity": {
+            "kind": "software-family",
+            "namespace": "lab",
+            "name": "Copper Moth"
+          },
+          "predicate": "claim",
+          "value": "present",
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": "2026-01-02T00:00:00Z",
+          "recorded_at": "2026-01-03T00:00:00Z",
+          "source": "fixture-source-e1",
+          "source_group": "child-group",
+          "artifact": "child-artifact",
+          "derived_from": [
+            "intermediate"
+          ],
+          "claim_kind": "observation",
+          "verification_ref": null
+        },
+        {
+          "id": "other",
+          "entity": {
+            "kind": "software-family",
+            "namespace": "lab",
+            "name": "Copper Moth"
+          },
+          "predicate": "claim",
+          "value": "present",
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": "2026-01-02T00:00:00Z",
+          "recorded_at": "2026-01-03T00:00:00Z",
+          "source": "fixture-source-e1",
+          "source_group": "shared-group",
+          "artifact": "other-artifact",
+          "derived_from": [],
+          "claim_kind": "observation",
+          "verification_ref": null
+        }
+      ]
+    },
+    {
+      "entity": [
+        "software-family",
+        "lab",
+        "copper moth"
+      ],
+      "predicate": "context",
+      "classification": "INFERRED",
+      "assessment": "SINGLE_LINEAGE",
+      "reason": "Shared or unknown provenance prevents independent corroboration.",
+      "independent_lineage_groups": [
+        [
+          "intermediate",
+          "root"
+        ]
+      ],
+      "contradictions": [],
+      "assertions": [
+        {
+          "id": "intermediate",
+          "entity": {
+            "kind": "software-family",
+            "namespace": "lab",
+            "name": "Copper Moth"
+          },
+          "predicate": "context",
+          "value": "present",
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": "2026-01-02T00:00:00Z",
+          "recorded_at": "2026-01-03T00:00:00Z",
+          "source": "fixture-source-e1",
+          "source_group": "shared-group",
+          "artifact": "middle-artifact",
+          "derived_from": [
+            "root"
+          ],
+          "claim_kind": "observation",
+          "verification_ref": null
+        },
+        {
+          "id": "root",
+          "entity": {
+            "kind": "software-family",
+            "namespace": "lab",
+            "name": "Copper Moth"
+          },
+          "predicate": "context",
+          "value": "present",
+          "valid_from": "2026-01-01T00:00:00Z",
+          "valid_to": "2026-01-02T00:00:00Z",
+          "recorded_at": "2026-01-03T00:00:00Z",
+          "source": "fixture-source-e1",
+          "source_group": "root-group",
+          "artifact": "root-artifact",
+          "derived_from": [],
+          "claim_kind": "observation",
+          "verification_ref": null
+        }
+      ]
+    }
+  ],
+  "review_queue": [
+    {
+      "entity": [
+        "software-family",
+        "lab",
+        "copper moth"
+      ],
+      "predicate": "claim",
+      "action": "Shared or unknown provenance prevents independent corroboration.",
+      "assessment": "SINGLE_LINEAGE"
+    },
+    {
+      "entity": [
+        "software-family",
+        "lab",
+        "copper moth"
+      ],
+      "predicate": "context",
+      "action": "Shared or unknown provenance prevents independent corroboration.",
+      "assessment": "SINGLE_LINEAGE"
+    }
+  ],
+  "policy": "Names normalized with NFC/casefold/whitespace; namespace-qualified exact matches only. Conflicts require half-open time overlap. Source independence is supplied, not proven. No automatic verification or targeting."
+}

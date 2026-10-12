@@ -1,0 +1,7 @@
+{
+  "classification": "OBSERVED",
+  "python": "3.12.3",
+  "sqlite": "3.45.1",
+  "dependencies": "Python standard library only",
+  "ruff": "0.17.0"
+}

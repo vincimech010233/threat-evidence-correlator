@@ -1,0 +1,12 @@
+{
+  "classification": "OBSERVED",
+  "intermediate_source_assessment": "SINGLE_LINEAGE",
+  "lineage_groups": [
+    [
+      "child",
+      "other"
+    ]
+  ],
+  "date_only_rejected": true,
+  "timestamp_error": "UTC timestamp ending Z required"
+}

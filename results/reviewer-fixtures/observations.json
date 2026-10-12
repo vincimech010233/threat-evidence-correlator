@@ -1,0 +1,17 @@
+{
+  "classification": "OBSERVED",
+  "intermediate_source_assessment": "MULTIPLE_DECLARED_LINEAGES",
+  "intermediate_source_groups": [
+    [
+      "child"
+    ],
+    [
+      "other"
+    ]
+  ],
+  "date_only_timestamp": {
+    "input": "2026-01-01Z",
+    "parsed": "2026-01-01 00:00:00",
+    "has_utc_timezone": false
+  }
+}
